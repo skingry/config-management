@@ -39,6 +39,10 @@
   import_tasks:
     file: tautulli.yml
 
+- name: unmanic
+  import_tasks:
+    file: unmanic.yml
+
 - name: nginx
   import_tasks:
     file: nginx.yml
@@ -46,10 +50,6 @@
 - name: plex-cleaner
   import_tasks:
     file: plex-cleaner.yml
-
-- name: plexcleaner
-  import_tasks:
-    file: plexcleaner.yml
 
 - name: certbot
   import_tasks:

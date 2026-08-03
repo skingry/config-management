@@ -1,0 +1,21 @@
+---
+- name: unmanic - pull and configure
+  docker_container:
+    name: unmanic
+    image: josh5/unmanic
+    pull: true
+    env:
+      TZ: "America/New_York"
+      PUID: "65534"
+      PGID: "65534"
+      CONFIG_DIR: "/config"
+      LIBRARY_DIR: "/media"
+      CACHE_DIR: "/tmp/unmanic"
+    devices:
+      - /dev/dri/card1:/dev/dri/card1:rwm
+      - /dev/dri/renderD128:/dev/dri/renderD128:rwm
+    volumes:
+      - /opt/config/unmanic:/config:rw
+      - /data/shares/Media:/media:rw
+      - /tmp:/tmp:rw
+    restart_policy: always

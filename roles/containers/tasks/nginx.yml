@@ -14,9 +14,9 @@
       - openvpn-client:sonarr
       - openvpn-client:qbittorrent
       - tautulli:tautulli
+      - unmanic:unmanic
     volumes:
       - /opt/config/nginx:/etc/nginx:rw
-      - /data/shares/Downloads:/downloads:rw
     restart_policy: always
 
 - name: nginx - setup cronjob to regularly restart
