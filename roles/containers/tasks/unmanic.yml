@@ -4,6 +4,7 @@
     name: unmanic
     image: josh5/unmanic
     pull: true
+    network_mode: host
     env:
       TZ: "America/New_York"
       PUID: "65534"
@@ -17,5 +18,5 @@
     volumes:
       - /opt/config/unmanic:/config:rw
       - /data/shares/Media:/media:rw
-      - /tmp:/tmp:rw
+      - /data/temp:/tmp:rw
     restart_policy: always
