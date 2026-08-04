@@ -9,12 +9,17 @@
     name: fastfetch
     state: present
 
+- name: Install intel-gpu-tools
+  package:
+    name: intel-gpu-tools
+    state: present
+
 - name: Install net-tools
   package:
     name: net-tools
     state: present
 
-- name: Speedtest CLI
+- name: Install speedtest-cli
   package:
     name: speedtest-cli
     state: present

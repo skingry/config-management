@@ -4,7 +4,6 @@
     name: unmanic
     image: josh5/unmanic
     pull: true
-    network_mode: host
     env:
       TZ: "America/New_York"
       PUID: "65534"
