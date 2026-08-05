@@ -1,0 +1,15 @@
+---
+- name: beets - pull and configure
+  docker_container:
+    name: beets
+    image: linuxserver/beets
+    pull: true
+    env:
+      TZ: "America/New_York"
+      PUID: "65534"
+      PGID: "65534"
+    volumes:
+      - /opt/config/beets:/config:rw
+      - /data/shares/Media/Music:/music:rw
+      - /data/shares/Downloads/complete/music:/downloads:rw
+    restart_policy: always
