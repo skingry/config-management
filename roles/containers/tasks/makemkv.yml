@@ -4,9 +4,6 @@
     name: makemkv
     image: jlesage/makemkv
     pull: true
-    devices:
-      - /dev/sr0:/dev/sr0:rwm
-      - /dev/sg3:/dev/sg3:rwm
     env:
       USER_ID: "65534"
       GROUP_ID: "65534"
