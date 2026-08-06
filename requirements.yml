@@ -2,11 +2,11 @@
 roles:
   - name: docker
     src: https://github.com/geerlingguy/ansible-role-docker
-    version: "7.6.0"
+    version: "8.0.0"
 
   - name: pip
     src: https://github.com/geerlingguy/ansible-role-pip
-    version: "3.1.0"
+    version: "3.1.2"
 
   - name: systemd-timesyncd
     src: https://github.com/stuvusIT/ansible_systemd_timesyncd

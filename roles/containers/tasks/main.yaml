@@ -1,4 +1,11 @@
 ---
+- name: reverse-proxy - setup network
+  docker_network:
+    name: reverse-proxy
+    ipam_config:
+      - subnet: 172.19.0.0/16
+        gateway: 172.19.0.1
+
 - name: openvpn-client
   import_tasks:
     file: openvpn-client.yml

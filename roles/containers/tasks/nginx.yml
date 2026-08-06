@@ -7,14 +7,16 @@
     ports:
       - "80:80"
       - "443:443"
-    links:
-      - openvpn-client:lidarr
-      - openvpn-client:radarr
-      - openvpn-client:nzbget
-      - openvpn-client:sonarr
-      - openvpn-client:qbittorrent
-      - tautulli:tautulli
-      - unmanic:unmanic
+    networks:
+      - name: reverse-proxy
+        links:
+          - openvpn-client:lidarr
+          - openvpn-client:radarr
+          - openvpn-client:nzbget
+          - openvpn-client:sonarr
+          - openvpn-client:qbittorrent
+          - tautulli:tautulli
+          - unmanic:unmanic
     volumes:
       - /opt/config/nginx:/etc/nginx:rw
     restart_policy: always

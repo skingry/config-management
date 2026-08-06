@@ -4,6 +4,8 @@
     name: openvpn-client
     image: dperson/openvpn-client
     pull: true
+    networks:
+      - name: reverse-proxy
     capabilities:
       - net_admin
     devices:

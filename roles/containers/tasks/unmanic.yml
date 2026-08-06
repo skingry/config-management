@@ -4,6 +4,8 @@
     name: unmanic
     image: josh5/unmanic
     pull: true
+    networks:
+      - name: reverse-proxy
     env:
       TZ: "America/New_York"
       PUID: "65534"

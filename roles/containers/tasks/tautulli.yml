@@ -4,6 +4,8 @@
     name: tautulli
     image: linuxserver/tautulli
     pull: true
+    networks:
+      - name: reverse-proxy
     env:
       PGID: "65534"
       PUID: "65534"
