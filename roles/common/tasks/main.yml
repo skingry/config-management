@@ -9,6 +9,11 @@
     name: fastfetch
     state: present
 
+- name: Install ffmpeg
+  package:
+    name: ffmpeg
+    state: present
+
 - name: Install intel-gpu-tools
   package:
     name: intel-gpu-tools
